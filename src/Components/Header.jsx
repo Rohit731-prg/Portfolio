@@ -1,0 +1,115 @@
+import React from "react";
+import { Link } from "react-scroll";
+import {
+  FaFacebook,
+  FaTwitterSquare,
+  FaInstagramSquare,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+import { IoMdArrowDropdownCircle } from "react-icons/io";
+import { scroller } from "react-scroll";
+
+function Header() {
+  const imgLink =
+    "https://images.unsplash.com/photo-1678875922594-92c3cc35d088?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja2dyb3VuZCUyMGltYWdlJTIwZnJlZXxlbnwwfHwwfHx8MA%3D%3D";
+  const nextSection = () => {
+    scroller.scrollTo("about", {
+      duration: 500,
+      smooth: true,
+      offset: -50,
+    });
+  };
+
+  const socialLinks = [
+    <FaFacebook />,
+    <FaTwitterSquare />,
+    <FaInstagramSquare />,
+    <FaGithub />,
+    <FaLinkedin />,
+  ]
+
+  return (
+    <div className="w-full h-screen flex flex-row">
+      <div className="fixed w-3/4 h-auto px-10 py-5 bg-black top-10 left-1/2 transform -translate-x-1/2 text-white flex flex-row justify-between">
+        <p>Portfolio</p>
+        <div className="flex gap-10">
+          <Link
+            className="cursor-pointer"
+            to="home"
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </Link>
+          <Link
+            className="cursor-pointer"
+            to="about"
+            smooth={true}
+            duration={500}
+          >
+            About
+          </Link>
+          <Link
+            className="cursor-pointer"
+            to="works"
+            smooth={true}
+            duration={500}
+          >
+            Works
+          </Link>{" "}
+          {/* Fixed duplicate About link */}
+        </div>
+      </div>
+
+      <div
+        className="w-1/2 h-full flex flex-col justify-end items-center pb-20"
+        id="home"
+      >
+        <div className="w-3/4">
+          <p className="text-2xl text-orange-400 font-normal mb-5">Hello</p>
+          <p className="text-6xl font-semibold">
+            I'm Jonathan Doe, a product designer based in Somewhere.
+          </p>
+          <div className="flex flex-row gap-10 mt-20">
+            <button className="px-5 py-3 cursor-pointer bg-black text-white border-2 border-black">
+              MORE ABOUT ME
+            </button>
+            <button className="px-5 py-3 cursor-pointer border-2 border-black text-black">
+              GET IN TOUCH
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{ backgroundImage: `url(${imgLink})` }}
+        className="w-1/2 h-full bg-cover bg-center "
+      >
+        <div className="text-white flex flex-row justify-between h-full items-end">
+          <div className="px-5 py-10">
+            <button className="px-5 py-3 border-2 border-white">
+              GET MY CV
+            </button>
+          </div>
+          <div className="h-full flex flex-col items-center gap-3 text-4xl px-5 pb-10 justify-end">
+            {socialLinks.map((link, index) => (
+              <button
+              className="cursor-pointer" 
+              key={index}>{link}</button>
+            ))}
+            <div className="h-40 w-[2px] bg-white"></div>
+            <button
+              onClick={nextSection}
+              className="text-xl cursor-pointer border-2 border-white p-4 mt-10 rounded-full"
+            >
+              <IoMdArrowDropdownCircle />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Header;
