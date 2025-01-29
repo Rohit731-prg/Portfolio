@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { scroller } from "react-scroll";
+import CV from './../assets/CV.pdf'
 
 function Header() {
   const imgLink =
@@ -22,11 +23,27 @@ function Header() {
   };
 
   const socialLinks = [
-    <FaFacebook />,
-    <FaTwitterSquare />,
-    <FaInstagramSquare />,
-    <FaGithub />,
-    <FaLinkedin />,
+    {
+      icon: <FaFacebook />,
+      link: "https://www.facebook.com/abdulrahman.ahmed.399/",
+    },
+    {
+      icon: <FaTwitterSquare />,
+      link: "https://twitter.com/AbdulrahmanAhmed",
+    },
+    {
+      icon: <FaInstagramSquare />,
+      link: "https://www.instagram.com/abdulrahman_ahmed/",
+    },
+    {
+      icon: <FaGithub />,
+      link: "https://github.com/Rohit731-prg",
+    },
+    {
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/rohit-singha-55477b308/",
+    },
+    
   ]
 
   return (
@@ -69,13 +86,13 @@ function Header() {
         <div className="w-3/4">
           <p className="text-2xl text-orange-400 font-normal mb-5">Hello</p>
           <p className="text-6xl font-semibold">
-            I'm Jonathan Doe, a product designer based in Somewhere.
+            I'm Rohit Singha, a web developer based in Somewhere.
           </p>
           <div className="flex flex-row gap-10 mt-20">
-            <button className="px-5 py-3 cursor-pointer bg-black text-white border-2 border-black">
+            <button className="px-5 py-3 cursor-pointer bg-black text-white border-2 border-black hover:bg-white hover:text-black">
               MORE ABOUT ME
             </button>
-            <button className="px-5 py-3 cursor-pointer border-2 border-black text-black">
+            <button className="px-5 py-3 cursor-pointer border-2 border-black text-black hover:bg-black hover:text-white">
               GET IN TOUCH
             </button>
           </div>
@@ -88,15 +105,18 @@ function Header() {
       >
         <div className="text-white flex flex-row justify-between h-full items-end">
           <div className="px-5 py-10">
-            <button className="px-5 py-3 border-2 border-white">
+            <button 
+            onClick={() => window.open(CV, '_blank')}
+            className="px-5 py-3 border-2 border-white">
               GET MY CV
             </button>
           </div>
           <div className="h-full flex flex-col items-center gap-3 text-4xl px-5 pb-10 justify-end">
             {socialLinks.map((link, index) => (
               <button
+              onClick={() => window.open(link.link)}
               className="cursor-pointer" 
-              key={index}>{link}</button>
+              key={index}>{link.icon}</button>
             ))}
             <div className="h-40 w-[2px] bg-white"></div>
             <button
