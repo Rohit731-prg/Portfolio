@@ -101,13 +101,13 @@ function Header() {
 
       <div
         style={{ backgroundImage: `url(${imgLink})` }}
-        className="w-1/2 h-full bg-cover bg-center "
+        className="w-1/2 h-full bg-cover bg-center"
       >
         <div className="text-white flex flex-row justify-between h-full items-end">
           <div className="px-5 py-10">
             <button 
             onClick={() => window.open(CV, '_blank')}
-            className="px-5 py-3 border-2 border-white">
+            className="px-5 py-3 font-semibold border-2 border-white hover:bg-white hover:text-black">
               GET MY CV
             </button>
           </div>

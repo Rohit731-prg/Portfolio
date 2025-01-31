@@ -16,7 +16,7 @@ function About() {
     }
   ];
   const Technologies = [
-    'HTML','Css', 'Javascript', 'C', 'Cpp', 'Java', 'Python', 'SQL', 'Dart'
+    'HTML','Css', 'Javascript', 'C', 'Cpp', 'Java', 'Python', 'Dart'
   ];
   const skills = [
     'React JS', 'Tailwind', 'React Native', 'Git', 'Github'
