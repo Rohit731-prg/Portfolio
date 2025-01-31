@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full sm:h-screen h-auto px-10 sm:mt-40 pt-10 bg-black'>
+    <div id='footer' className='w-full sm:h-screen h-auto px-10 sm:mt-40 pt-10 bg-black'>
         <p className='text-white text-6xl font-semibold mb-20'>GET IN TOUCH</p>
         <div className='px-20 grid sm:grid-cols-2 grid-cols-1'>
             <div>

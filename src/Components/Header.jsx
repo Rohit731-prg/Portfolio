@@ -21,6 +21,13 @@ function Header() {
       offset: -50,
     });
   };
+  const footerSection = () => {
+    scroller.scrollTo('footer', {
+      duration: 500,
+      smooth: true,
+      offset: -50,
+    })
+  }
 
   const socialLinks = [
     {
@@ -92,7 +99,9 @@ function Header() {
             <button className="px-5 py-3 cursor-pointer bg-black text-white border-2 border-black hover:bg-white hover:text-black">
               MORE ABOUT ME
             </button>
-            <button className="px-5 py-3 cursor-pointer border-2 border-black text-black hover:bg-black hover:text-white">
+            <button 
+            onClick={footerSection}
+            className="px-5 py-3 cursor-pointer border-2 border-black text-black hover:bg-black hover:text-white">
               GET IN TOUCH
             </button>
           </div>
