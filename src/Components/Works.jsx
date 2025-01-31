@@ -32,10 +32,10 @@ function Works() {
     },
   ];
   return (
-    <div className="w-full h-screen px-10 py-20" id="works">
+    <div className="w-full sm:h-screen h-auto px-10 py-20" id="works">
       <p className="my-20 text-6xl font-semibold">Works</p>
 
-      <div className="grid grid-cols-2 gap-10 px-10 rounded-b-xl">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-10 sm:px-10 px-2 rounded-b-xl">
         {projectDetails.map((project, index) => (
           <div key={index} className="w-full h-full relative">
             <img
@@ -46,11 +46,11 @@ function Works() {
             <div
               className={`absolute bottom-0 w-full h-auto p-4 text-white bg-black/30 backdrop-blur-lg border border-white/10 rounded-b-xl`}
             >
-              <p className="font-semibold">{project.title}</p>
-              <p className="text-sm">{project.des}</p>
+              <p className="font-semibold sm:text-2xl text-sm">{project.title}</p>
+              <p className="sm:text-sm text-[10px]">{project.des}</p>
               <button
                 onClick={() => window.open(project.link)}
-                className="mt-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-md"
+                className="mt-2 px-4 py-2 text-[12px] sm:text-xl bg-blue-500 hover:bg-blue-600 rounded-md"
               >
                 Project Link
               </button>

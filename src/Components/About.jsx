@@ -24,7 +24,7 @@ function About() {
   return (
     <div
     id='about'
-    className='w-full h-screen px-10 py-20'
+    className='w-full sm:h-screen h-auto px-10 py-20'
     >
       <p className='my-20 text-6xl font-semibold'>About Me</p>
       <p>
@@ -34,7 +34,7 @@ function About() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Ut enim ad minim 
       </p>
 
-      <div className='w-2/3 flex flex-row gap-10 justify-between px-10 mt-10'>
+      <div className='w-2/3 flex sm:flex-row flex-col gap-10 justify-between px-10 mt-10'>
         <div>
           <p className='font-semibold text-3xl mb-5 underline'>Experience</p>
           <div>

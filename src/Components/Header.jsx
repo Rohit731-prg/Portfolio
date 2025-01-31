@@ -47,10 +47,10 @@ function Header() {
   ]
 
   return (
-    <div className="w-full h-screen flex flex-row">
+    <div className="w-full sm:h-screen h-auto flex sm:flex-row flex-col">
       <div className="fixed w-3/4 h-auto px-10 py-5 bg-black top-10 left-1/2 transform -translate-x-1/2 text-white flex flex-row justify-between">
         <p>Portfolio</p>
-        <div className="flex gap-10">
+        <div className="flex sm:gap-10 gap-2">
           <Link
             className="cursor-pointer"
             to="home"
@@ -80,12 +80,12 @@ function Header() {
       </div>
 
       <div
-        className="w-1/2 h-full flex flex-col justify-end items-center pb-20"
+        className="sm:w-1/2 w-full h-full flex flex-col justify-end items-center pb-20"
         id="home"
       >
-        <div className="w-3/4">
+        <div className="w-3/4 sm:pt-0 pt-40">
           <p className="text-2xl text-orange-400 font-normal mb-5">Hello</p>
-          <p className="text-6xl font-semibold">
+          <p className="sm:text-6xl text-2xl sm:font-semibold font-medium">
             I'm Rohit Singha, a web developer based in Somewhere.
           </p>
           <div className="flex flex-row gap-10 mt-20">
@@ -101,7 +101,7 @@ function Header() {
 
       <div
         style={{ backgroundImage: `url(${imgLink})` }}
-        className="w-1/2 h-full bg-cover bg-center"
+        className="sm:w-1/2 w-full h-full bg-cover bg-center"
       >
         <div className="text-white flex flex-row justify-between h-full items-end">
           <div className="px-5 py-10">
